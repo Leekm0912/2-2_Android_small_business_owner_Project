@@ -31,6 +31,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.DoubleBuffer;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -42,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
     String xml;
     ListView listView;
     ArrayList<ListItem> arrayList;
-
+    //가저온 번들
+    Intent intent = getIntent();
+    Bundle bundle = intent.getExtras();
+    String value = bundle.getString("ba");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                     //title 추출
                     NodeList cate = element.getElementsByTagName("category");
                     String category = cate.item(0).getChildNodes().item(0).getNodeValue();
-                    //if(category.equals("인테리어이야기")){
+                    if(category.equals(value)){
                         NodeList title = element.getElementsByTagName("title");
                         String text = title.item(0).getChildNodes().item(0).getNodeValue();
                         //link 추출
@@ -183,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                         String res = link.item(0).getChildNodes().item(0).getNodeValue();
                         //저장
                         arrayList.add(new ListItem(category, text,res));
-                    //}
+                    }
 
                 }
 
