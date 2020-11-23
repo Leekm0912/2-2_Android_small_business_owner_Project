@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
     }
+    //커밋실험용
     //두개를 연결할 BaseAdapter 를 상속 받는 어뎁터 재정의
     class MultiAdapter extends BaseAdapter {
         ArrayList<ListItem> list;
