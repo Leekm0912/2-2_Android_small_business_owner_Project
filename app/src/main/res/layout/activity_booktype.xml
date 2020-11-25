@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context=".booktype">
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="에코건축자재"
+        android:textColor="#DFF6F6F6"
+        android:textSize="50sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/book1"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:text="상담 예약"
+        android:layout_marginTop="120dp"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/book2"
+        android:background="@drawable/button_background"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="40dp"
+        android:text="DIY 예약" />
+
+</LinearLayout>

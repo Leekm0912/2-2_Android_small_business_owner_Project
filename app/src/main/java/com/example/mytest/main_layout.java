@@ -37,6 +37,8 @@ public class main_layout extends AppCompatActivity {
             Intent intent;
             switch (v.getId()){
                 case R.id.info1:
+                    intent = new Intent(main_layout.this,info1.class);
+                    startActivity(intent);
                     break;
                 case R.id.ba:
                     intent = new Intent(main_layout.this,MainActivity.class);
