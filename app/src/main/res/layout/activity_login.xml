@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="400dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="70dp"
+                android:text="아이디"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/ID"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="50dp"
+                android:text="암    호"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/Pass"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:textSize="30sp"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/login"
+            android:background="@drawable/button_background"
+            android:onClick="mClick"
+            android:text="로그인"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

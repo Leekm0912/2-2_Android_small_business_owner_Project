@@ -34,21 +34,25 @@ public class main_layout extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            Intent intent;
             switch (v.getId()){
                 case R.id.info1:
                     break;
                 case R.id.ba:
-                    Bundle bundle = new Bundle();
-                    bundle.putString("ba","인테리어이야기");
-                    Intent intent = new Intent(main_layout.this,MainActivity.class);
-                    intent.putExtra("baBundle",bundle);
+                    intent = new Intent(main_layout.this,MainActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.info2:
+                    intent = new Intent(main_layout.this,MainActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.login:
+                    intent = new Intent(main_layout.this,login.class);
+                    startActivity(intent);
                     break;
                 case R.id.add_log:
+                    intent = new Intent(main_layout.this,add_log.class);
+                    startActivity(intent);
                     break;
             }
         }

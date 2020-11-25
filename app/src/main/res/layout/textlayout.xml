@@ -7,14 +7,6 @@
     android:gravity="bottom">
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:id="@+id/text1"
-    android:textSize="15sp"
-    android:layout_gravity="bottom"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="15dp" />
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/text2"

@@ -6,15 +6,12 @@
     tools:context=".login_layout"
     android:orientation="vertical"
     android:background="@drawable/back">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
+
 
     <TextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="에코건축자재"
         android:textColor="#DFF6F6F6"
@@ -22,6 +19,7 @@
         android:layout_gravity="center"
         android:layout_weight="1"
         android:layout_marginBottom="40dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,6 +69,43 @@
             android:onClick="mClick"/>
 
         <Button
+            android:id="@+id/board"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="268dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:onClick="mClick"
+            android:text="게시판"
+            android:textColor="#DFF6F6F6"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_marginBottom="60dp">
+
+        <Button
+            android:id="@+id/info2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="268dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:onClick="mClick"
+            android:text="도구/자재 소개"
+            android:textColor="#DFF6F6F6"
+            android:textSize="25sp" />
+
+        <Button
             android:id="@+id/ba"
             android:layout_width="268dp"
             android:layout_height="55dp"
@@ -86,51 +121,6 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="2">
-
-        <Button
-            android:id="@+id/info2"
-            android:layout_width="268dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:text="도구/자재 소개"
-            android:textSize="25sp"
-            android:textColor="#DFF6F6F6"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_marginBottom="40dp"
-            android:onClick="mClick"/>
-        <Button
-            android:id="@+id/board"
-            android:layout_width="268dp"
-            android:layout_height="55dp"
-            android:textColor="#DFF6F6F6"
-            android:text="게시판"
-            android:textSize="25sp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_marginBottom="20dp"
-            android:onClick="mClick"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-    </LinearLayout>
 
 </LinearLayout>
