@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mytest">
-
+    package="net.ddns.leekm.eco_design_app">
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.Eco_Design_App"
+        android:name=".AppData"
+        android:usesCleartextTraffic="true">
         <activity android:name=".booktype"></activity>
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="ji9eqzwwbz" />
+            android:value="w853dymsz0" />
 
         <activity android:name=".add_log" />
         <activity android:name=".info1"></activity>

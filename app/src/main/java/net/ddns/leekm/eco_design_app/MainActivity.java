@@ -1,4 +1,4 @@
-package com.example.mytest;
+package net.ddns.leekm.eco_design_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -176,13 +176,13 @@ public class MainActivity extends AppCompatActivity {
                     NodeList cate = element.getElementsByTagName("category");
                     String category = cate.item(0).getChildNodes().item(0).getNodeValue();
                     //if(category.equals(value)){
-                        NodeList title = element.getElementsByTagName("title");
-                        String text = title.item(0).getChildNodes().item(0).getNodeValue();
-                        //link 추출
-                        NodeList link = element.getElementsByTagName("link");
-                        String res = link.item(0).getChildNodes().item(0).getNodeValue();
-                        //저장
-                        arrayList.add(new ListItem(category, text,res));
+                    NodeList title = element.getElementsByTagName("title");
+                    String text = title.item(0).getChildNodes().item(0).getNodeValue();
+                    //link 추출
+                    NodeList link = element.getElementsByTagName("link");
+                    String res = link.item(0).getChildNodes().item(0).getNodeValue();
+                    //저장
+                    arrayList.add(new ListItem(category, text,res));
                     //
 
                 }

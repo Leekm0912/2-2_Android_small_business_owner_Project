@@ -1,4 +1,4 @@
-package com.example.mytest;
+package net.ddns.leekm.eco_design_app;
 
 import org.junit.Test;
 

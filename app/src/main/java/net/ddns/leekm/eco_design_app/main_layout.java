@@ -1,10 +1,8 @@
-package com.example.mytest;
+package net.ddns.leekm.eco_design_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class main_layout extends AppCompatActivity {
@@ -14,13 +12,13 @@ public class main_layout extends AppCompatActivity {
     Button login_btn;
     Button add_log_btn;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_layout);
         info1_btn = findViewById(R.id.info1);
         info2_btn = findViewById(R.id.info2);
         ba_btn = findViewById(R.id.ba);
-        login_btn = findViewById(R.id.login);
+        login_btn = findViewById(R.id.login_btn);
         add_log_btn = findViewById(R.id.add_log);
 
         info1_btn.setOnClickListener(onClickListener);
@@ -30,10 +28,10 @@ public class main_layout extends AppCompatActivity {
         add_log_btn.setOnClickListener(onClickListener);
     }
 
-    View.OnClickListener onClickListener = new View.OnClickListener(){
+    android.view.View.OnClickListener onClickListener = new android.view.View.OnClickListener(){
 
         @Override
-        public void onClick(View v) {
+        public void onClick(android.view.View v) {
             Intent intent;
             switch (v.getId()){
                 case R.id.info1:
@@ -48,7 +46,7 @@ public class main_layout extends AppCompatActivity {
                     intent = new Intent(main_layout.this,MainActivity.class);
                     startActivity(intent);
                     break;
-                case R.id.login:
+                case R.id.login_btn:
                     intent = new Intent(main_layout.this,login.class);
                     startActivity(intent);
                     break;

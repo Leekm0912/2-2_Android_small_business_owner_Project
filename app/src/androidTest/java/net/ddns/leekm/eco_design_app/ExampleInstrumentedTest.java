@@ -1,4 +1,4 @@
-package com.example.mytest;
+package net.ddns.leekm.eco_design_app;
 
 import android.content.Context;
 
@@ -21,7 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-
-        assertEquals("com.example.mytest", appContext.getPackageName());
+        assertEquals("net.ddns.leekm.eco_design_app", appContext.getPackageName());
     }
 }

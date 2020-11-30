@@ -10,13 +10,13 @@
     <TextView
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="에코건축자재"
-        android:textColor="#DFF6F6F6"
-        android:textSize="50sp"
         android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
         android:layout_weight="3"
-        android:layout_marginBottom="40dp"/>
+        android:gravity="center"
+        android:text="에코건축디자인"
+        android:textColor="#DFF6F6F6"
+        android:textSize="50sp" />
 
     <Button
         android:id="@+id/info1"
@@ -58,7 +58,7 @@
         android:onClick="mClick"/>
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/login_btn"
         android:layout_width="165dp"
         android:layout_height="61dp"
         android:background="@drawable/button_background"

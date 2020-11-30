@@ -1,10 +1,6 @@
-package com.example.mytest;
+package net.ddns.leekm.eco_design_app;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
-import android.os.Bundle;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraUpdate;
@@ -17,7 +13,7 @@ import com.naver.maps.map.overlay.Marker;
 public class info1 extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info1);
 
@@ -30,7 +26,7 @@ public class info1 extends AppCompatActivity implements OnMapReadyCallback {
 
     }
     @Override
-    public void onMapReady(@NonNull NaverMap naverMap) {
+    public void onMapReady(@androidx.annotation.NonNull NaverMap naverMap) {
         //지도 유형
         naverMap.setMapType( NaverMap.MapType.Navi);
 
@@ -54,15 +50,15 @@ public class info1 extends AppCompatActivity implements OnMapReadyCallback {
         marker1.setMap(naverMap);
 
         marker1.setSubCaptionText("에코건축자재");
-        marker1.setCaptionColor(Color.RED);
-        marker1.setSubCaptionHaloColor(Color.YELLOW);
+        marker1.setCaptionColor(android.graphics.Color.RED);
+        marker1.setSubCaptionHaloColor(android.graphics.Color.YELLOW);
         marker1.setSubCaptionTextSize(10);
 
         InfoWindow infoWindow1 = new InfoWindow();
         infoWindow1.setAdapter(new InfoWindow.DefaultTextAdapter(this) {
-            @NonNull
+            @androidx.annotation.NonNull
             @Override
-            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+            public CharSequence getText(@androidx.annotation.NonNull InfoWindow infoWindow) {
                 return "에코건축자재";
             }
         });
