@@ -83,4 +83,14 @@
         android:layout_marginBottom="60dp"
         android:onClick="mClick"/>
 
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="bottom|right"
+        android:text="version"
+        android:textColor="#2949FF"
+        android:textSize="15sp" />
+
 </LinearLayout>

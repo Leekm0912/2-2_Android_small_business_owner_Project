@@ -3,6 +3,7 @@ package net.ddns.leekm.eco_design_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.widget.TextView;
 
 public class login_layout extends AppCompatActivity {
 
@@ -10,6 +11,9 @@ public class login_layout extends AppCompatActivity {
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_layout);
+        AppData appData = (AppData) getApplication();
+        TextView test = findViewById(R.id.test);
+        test.setText("이름 : "+appData.getUser().get이름()+"\nID : "+appData.getUser().getID()+"\n전화번호 : "+appData.getUser().get전화번호());
     }
 
     public void mClick(android.view.View v){
