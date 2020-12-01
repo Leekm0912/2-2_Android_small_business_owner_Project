@@ -28,8 +28,7 @@
         android:layout_gravity="center"
         android:layout_weight="1"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_marginBottom="20dp"
-        android:onClick="mClick"/>
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:id="@+id/ba"
@@ -41,21 +40,8 @@
         android:layout_gravity="center"
         android:layout_weight="1"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_marginBottom="20dp"
-        android:onClick="mClick"/>
+        android:layout_marginBottom="20dp" />
 
-    <Button
-        android:id="@+id/info2"
-        android:layout_width="268dp"
-        android:layout_height="55dp"
-        android:text="도구/자재 소개"
-        android:textSize="25sp"
-        android:textColor="#DFF6F6F6"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_marginBottom="40dp"
-        android:onClick="mClick"/>
 
     <Button
         android:id="@+id/login_btn"
@@ -67,8 +53,7 @@
         android:textColor="#000000"
         android:layout_gravity="center"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_marginBottom="20dp"
-        android:onClick="mClick"/>
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:id="@+id/add_log"
@@ -80,17 +65,7 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:layout_marginBottom="60dp"
-        android:onClick="mClick"/>
+        android:layout_marginBottom="60dp" />
 
-    <TextView
-        android:id="@+id/version"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:gravity="bottom|right"
-        android:text="version"
-        android:textColor="#2949FF"
-        android:textSize="15sp" />
 
 </LinearLayout>

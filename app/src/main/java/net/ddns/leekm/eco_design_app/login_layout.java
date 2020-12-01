@@ -31,16 +31,8 @@ public class login_layout extends AppCompatActivity {
                 intent = new Intent(login_layout.this,MainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.info2:
-                intent = new Intent(login_layout.this,MainActivity.class);
-                startActivity(intent);
-                break;
             case R.id.booking:
                 intent = new Intent(login_layout.this,booktype.class);
-                startActivity(intent);
-                break;
-            case R.id.board:
-                intent = new Intent(login_layout.this,MainActivity.class);
                 startActivity(intent);
                 break;
         }

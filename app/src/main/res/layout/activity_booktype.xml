@@ -7,36 +7,27 @@
     android:background="@drawable/back"
     tools:context=".booktype">
 
-    <TextView
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="에코건축자재"
-        android:textColor="#DFF6F6F6"
-        android:textSize="50sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="40dp"/>
-
     <Button
-        android:id="@+id/book1"
+        android:id="@+id/Consulting_book"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@drawable/button_background"
-        android:text="상담 예약"
-        android:layout_marginTop="120dp"
+        android:text="상 담 예 약"
+        android:onClick="mClick"
+        android:layout_marginTop="200dp"
         android:textSize="30sp"/>
 
     <Button
-        android:id="@+id/book2"
+        android:id="@+id/DIY_book"
         android:background="@drawable/button_background"
         android:layout_width="300dp"
         android:layout_gravity="center"
         android:layout_height="100dp"
         android:textSize="30sp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="40dp"
-        android:text="DIY 예약" />
+        android:onClick="mClick"
+        android:text="D I Y 예 약" />
 
 </LinearLayout>

@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.ddns.leekm.eco_design_app">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".AppData"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eco_Design_App"
-        android:name=".AppData"
         android:usesCleartextTraffic="true">
-        <activity android:name=".booktype"></activity>
+        <activity android:name=".borad">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DIY_booking" />
+        <activity android:name=".ConsultingBooking" />
+        <activity android:name=".booktype" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="w853dymsz0" />
 
         <activity android:name=".add_log" />
-        <activity android:name=".info1"></activity>
+        <activity android:name=".info1" />
         <activity android:name=".login" />
         <activity android:name=".main_layout">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".login_layout" />

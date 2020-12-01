@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".info1"
     android:orientation="vertical"
     android:background="@drawable/back">
 
     <LinearLayout
         android:layout_width="364dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/gray"
+        android:layout_height="621dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bggray"
         android:orientation="vertical">
 
         <TextView
@@ -21,142 +22,119 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="회 원 가 입"
-            android:textSize="25sp"
-            android:layout_weight="1"/>
+            android:textSize="25sp" />
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="이    름"
-                android:textSize="25sp" />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
+                app:counterEnabled="true"
+                app:counterMaxLength="4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="이름" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="아이디"
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/id"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="51dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="암    호"
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/pw"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:inputType="textPassword"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="주    소"
-                android:textSize="25sp" />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/address"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="주소" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="생년월일"
-                android:textSize="25sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="비밀번호" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/birthday"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
+                app:counterEnabled="true"
+                app:counterMaxLength="6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="생년월일(주민등록번호 앞자리)" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="273dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="53dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="20dp"
-                android:text="전화번호"
-                android:textSize="25sp" />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/phone"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="25sp" />
+                app:counterEnabled="true"
+                app:counterMaxLength="13">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="전화번호( - 포함 13자리)" />
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <Button
@@ -164,11 +142,10 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_background"
-            android:onClick="mClick"
             android:text="완료"
-            android:textSize="20sp"
-            android:layout_weight="1"/>
+            android:textSize="20sp" />
 
     </LinearLayout>
 
