@@ -33,7 +33,7 @@ public class login extends AppCompatActivity {
         EditText editTextPW = textwatcher(insertPW);
 
         button.setOnClickListener((v) -> {
-            String url = "http://220.66.111.200:8889/eco_design/eco_design/signIn.jsp";
+            String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/signIn.jsp";
             String parse_data = null;
 
             String id = editTextID.getText().toString();

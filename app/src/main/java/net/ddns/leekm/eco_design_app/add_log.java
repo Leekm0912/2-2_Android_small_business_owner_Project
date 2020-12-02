@@ -40,7 +40,7 @@ public class add_log extends AppCompatActivity {
         Button submit = findViewById(R.id.submit);
         submit.setOnClickListener((v)->{
             // URL 설정.
-            String url = "http://220.66.111.200:8889/eco_design/eco_design/signUp.jsp";
+            String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/signUp.jsp";
             String parse_data = null;
 
             String id_str = editTextID.getText().toString();

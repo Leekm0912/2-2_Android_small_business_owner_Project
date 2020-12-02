@@ -14,11 +14,7 @@
         android:theme="@style/Theme.Eco_Design_App"
         android:usesCleartextTraffic="true">
         <activity android:name=".borad">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".DIY_booking" />
         <activity android:name=".ConsultingBooking" />
@@ -32,7 +28,11 @@
         <activity android:name=".info1" />
         <activity android:name=".login" />
         <activity android:name=".main_layout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".login_layout" />
