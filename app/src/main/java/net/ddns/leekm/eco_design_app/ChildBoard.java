@@ -174,7 +174,7 @@ public class ChildBoard extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        String url = AppData.SERVER_FULL_URL+"/yonam-market/market/insertComment.jsp";
+        String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/insertComment.jsp";
         String parse_data = null;
 
         // AsyncTask를 통해 HttpURLConnection 수행.
