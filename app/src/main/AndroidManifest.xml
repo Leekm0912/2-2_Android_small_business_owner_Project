@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Eco_Design_App"
         android:usesCleartextTraffic="true">
-        <activity android:name=".borad">
-
-        </activity>
+        <activity android:name=".Popup"></activity>
+        <activity android:name=".ChildBoard" />
+        <activity android:name=".borad" />
         <activity android:name=".DIY_booking" />
         <activity android:name=".ConsultingBooking" />
         <activity android:name=".booktype" />
