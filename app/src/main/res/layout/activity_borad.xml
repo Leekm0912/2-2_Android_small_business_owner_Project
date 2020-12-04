@@ -18,7 +18,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/title"
+
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -27,6 +27,7 @@
             app:counterMaxLength="20">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="제목" />
@@ -43,7 +44,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="상 담 예 약"
+                android:text="상담예약"
                 android:id="@+id/Consulting"
                 android:checked="true"
                 android:layout_weight="1"/>
@@ -51,7 +52,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="D I Y 예 약"
+                android:text="DIY예약"
                 android:id="@+id/Diy"
                 android:checked="true"
                 android:layout_weight="1"/>
@@ -59,7 +60,7 @@
         </RadioGroup>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/story"
+
             android:layout_width="300dp"
             android:layout_height="295dp"
             android:layout_gravity="center"
@@ -68,6 +69,7 @@
             app:counterMaxLength="500">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="500자 이내로 기술해 주세요" />
@@ -79,7 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:text="신청"/>
+            android:onClick="postSubmit"
+            android:text="신청" />
 
 
     </LinearLayout>
