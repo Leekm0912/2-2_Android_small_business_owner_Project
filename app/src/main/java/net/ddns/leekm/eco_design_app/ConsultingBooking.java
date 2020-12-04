@@ -50,6 +50,7 @@ public class ConsultingBooking extends AppCompatActivity {
         button = findViewById(R.id.btn1);
         button.setOnClickListener((v) ->{
             Intent intent = new Intent(this,borad.class);
+            intent.putExtra("분류","상담예약");
             startActivity(intent);
         });
 

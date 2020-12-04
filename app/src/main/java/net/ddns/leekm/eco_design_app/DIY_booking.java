@@ -44,6 +44,7 @@ public class DIY_booking extends AppCompatActivity {
         button = findViewById(R.id.btn1);
         button.setOnClickListener((v) ->{
             Intent intent = new Intent(this,borad.class);
+            intent.putExtra("분류","DIY예약");
             startActivity(intent);
         });
         init();

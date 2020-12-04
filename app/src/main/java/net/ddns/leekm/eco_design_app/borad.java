@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 
 public class borad extends AppCompatActivity {
     Button submit;
-    RadioGroup rg;
     TextInputEditText title;
     TextInputEditText text;
     @Override
@@ -35,7 +34,6 @@ public class borad extends AppCompatActivity {
         text = findViewById(R.id.text);
 
         submit = findViewById(R.id.submit);
-        rg = (RadioGroup)findViewById(R.id.bookType);
         /*
         submit.setOnClickListener((v)->{
             Intent intent;
@@ -56,7 +54,6 @@ public class borad extends AppCompatActivity {
 
     public void postSubmit(View v){
         Map<String, String> param = new HashMap<>();
-        RadioButton rb = findViewById(rg.getCheckedRadioButtonId());
         String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/postUpload.jsp";
         String parse_data = null;
         ContentValues contentValues = new ContentValues();
@@ -71,14 +68,15 @@ public class borad extends AppCompatActivity {
                 Toast.makeText(this,"사용 불가능한 특수문자가 포함되어 있습니다.",Toast.LENGTH_SHORT).show();
                 return;
             }
+            Intent intent = getIntent();
             param.put("제목", URLEncoder.encode(title_str, "utf-8"));
             param.put("내용", URLEncoder.encode(text_str, "utf-8"));
-            param.put("분류", rb.getText().toString());
+            param.put("분류", intent.getStringExtra("분류"));
             param.put("사용자_ID", appData.getUser().getID());
 
             contentValues.put("제목", URLEncoder.encode(title_str, "utf-8"));
             contentValues.put("내용", URLEncoder.encode(text_str, "utf-8"));
-            contentValues.put("분류", rb.getText().toString());
+            contentValues.put("분류", intent.getStringExtra("분류"));
             contentValues.put("사용자_ID", appData.getUser().getID());
         }
         /*catch (NumberFormatException ne){ //숫자가 아닌값을 price에 입력했을때.

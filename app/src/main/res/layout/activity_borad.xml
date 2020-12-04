@@ -30,34 +30,8 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="제목" />
+                android:hint="제목" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <RadioGroup
-            android:id="@+id/bookType"
-            android:layout_marginTop="20dp"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="상담예약"
-                android:id="@+id/Consulting"
-                android:checked="true"
-                android:layout_weight="1"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DIY예약"
-                android:id="@+id/Diy"
-                android:checked="true"
-                android:layout_weight="1"/>
-
-        </RadioGroup>
 
         <com.google.android.material.textfield.TextInputLayout
 
@@ -72,7 +46,7 @@
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="500자 이내로 기술해 주세요" />
+                android:hint="500자 이내로 기술해 주세요" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
