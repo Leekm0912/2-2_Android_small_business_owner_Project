@@ -8,17 +8,19 @@
     android:background="@drawable/back">
 
 
-    <TextView
-        android:layout_width="340dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="에코건축자재"
-        android:textColor="#DFF6F6F6"
-        android:textSize="50sp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:layout_marginBottom="40dp"/>
+        android:layout_weight="2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="에코건축디자인"
+            android:textColor="#DFF6F6F6"
+            android:textSize="50sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
             android:id="@+id/logout"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="mClick"
             android:text="로그아웃"
@@ -50,61 +52,56 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="2">
-        <Button
-            android:id="@+id/booking"
-            android:layout_width="268dp"
-            android:layout_height="55dp"
-            android:text="예약"
-            android:textSize="25sp"
-            android:textColor="#DFF6F6F6"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_marginBottom="20dp"
-            android:onClick="mClick"/>
+        android:layout_weight="1"
+        android:paddingRight="80dp"
+        android:paddingLeft="80dp">
         <Button
             android:id="@+id/info1"
-            android:layout_width="268dp"
-            android:layout_height="55dp"
-            android:textColor="#DFF6F6F6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="업체소개"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:textColor="#DFF6F6F6"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_marginBottom="20dp"
             android:onClick="mClick"/>
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="60dp">
-
+        android:layout_weight="1"
+        android:paddingRight="80dp"
+        android:paddingLeft="80dp">
         <Button
             android:id="@+id/ba"
-            android:layout_width="268dp"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Before/After"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textColor="#DFF6F6F6"
             android:layout_gravity="center"
-            android:layout_weight="1"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_marginBottom="20dp"
             android:onClick="mClick"/>
-
     </LinearLayout>
 
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingRight="80dp"
+        android:paddingLeft="80dp">
+        <Button
+            android:id="@+id/booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="예   약"
+            android:textSize="30sp"
+            android:textColor="#DFF6F6F6"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:onClick="mClick"/>
+    </LinearLayout>
 
 </LinearLayout>

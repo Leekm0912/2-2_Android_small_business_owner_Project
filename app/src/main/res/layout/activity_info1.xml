@@ -7,14 +7,16 @@
     android:orientation="vertical"
     android:background="@drawable/back">
 
-
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="162dp"
-        android:layout_marginTop="20dp"
-        android:layout_weight="1"
-        android:scaleType="fitEnd"
-        android:src="@drawable/info_img" />
+        android:layout_height="30dp"
+        android:layout_weight="3">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/info_img" />
+    </LinearLayout>
 
     <fragment
         android:id="@+id/map"
@@ -25,15 +27,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_weight="1"
             android:text="상호명 : 에코건축자재 (대표 : 송현철)"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="주소 : 경남 진주시 진주대로 1326"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="이메일 : hyuncomu@naver.com"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -57,7 +57,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="연락처 : 010-3508-1413"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="팩스 : 055-747-1413"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="월~금요일 09:00~18:00"
             android:textColor="#ffffff"
             android:textSize="20dp" />
@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:text="토요일 09:00~17:00(일요일,공휴일 휴무)"
             android:textColor="#ffffff"
             android:textSize="20dp" />

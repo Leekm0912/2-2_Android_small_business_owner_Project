@@ -5,25 +5,32 @@
     android:layout_height="match_parent"
     tools:context=".login"
     android:orientation="vertical"
-    android:background="@drawable/back">
+    android:background="@drawable/back"
+    android:paddingTop="150dp"
+    android:paddingBottom="150dp">
+
 
     <LinearLayout
-        android:layout_width="364dp"
-        android:layout_height="400dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:background="@drawable/bggray"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="273dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp">
+            android:layout_weight="1"
+            android:paddingRight="70dp"
+            android:paddingLeft="70dp">
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/insertID"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -33,16 +40,18 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-
         <LinearLayout
-            android:layout_width="273dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_weight="1"
+            android:paddingRight="70dp"
+            android:paddingLeft="70dp">
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/insertPW"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -52,16 +61,22 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"
-            android:id="@+id/login_btn"
-            android:background="@drawable/button_background"
-            android:text="로그인"
-            android:textSize="20sp" />
+            android:layout_weight="1"
+            android:paddingRight="100dp"
+            android:paddingLeft="100dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/login_btn"
+                android:background="@drawable/button_background"
+                android:text="로그인"
+                android:textSize="20sp"/>
+        </LinearLayout>
 
     </LinearLayout>
 
