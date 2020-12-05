@@ -71,7 +71,7 @@ public class info1 extends AppCompatActivity implements OnMapReadyCallback {
 
     }
     public void call(View v){
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-4587-8429"));
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-3508-1413"));
         startActivity(intent);
     }
 }

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Eco_Design_App"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UpdateCommentPopup"></activity>
+        <activity android:name=".Notice_Board" />
+        <activity android:name=".UpdateCommentPopup" />
         <activity android:name=".UpdateBoardPopup" />
         <activity
             android:name=".Popup"

@@ -13,7 +13,7 @@ public class login_layout extends AppCompatActivity {
         setContentView(R.layout.activity_login_layout);
         AppData appData = (AppData) getApplication();
         TextView test = findViewById(R.id.test);
-        test.setText("이름 : "+appData.getUser().get이름()+"\nID : "+appData.getUser().getID()+"\n전화번호 : "+appData.getUser().get전화번호());
+        test.setText(appData.getUser().get이름()+"님");
     }
 
     public void mClick(android.view.View v){
@@ -25,6 +25,10 @@ public class login_layout extends AppCompatActivity {
                 break;
             case R.id.info1:
                 intent = new Intent(login_layout.this,info1.class);
+                startActivity(intent);
+                break;
+            case R.id.notice:
+                intent = new Intent(login_layout.this,Notice_Board.class);
                 startActivity(intent);
                 break;
             case R.id.ba:

@@ -9,15 +9,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#D6D6D6">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="D I Y 예 약"
-            android:textColor="#000000"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+            android:paddingLeft="15dp"
+            android:textColor="#2A2A2A"/>
 
         <Button
             android:id="@+id/btn1"
@@ -26,7 +28,7 @@
             android:layout_weight="1"
             android:background="@drawable/button_background"
             android:text="예약신청"
-            android:textSize="15sp"/>
+            android:textSize="15dp"/>
     </LinearLayout>
 
     <ListView
