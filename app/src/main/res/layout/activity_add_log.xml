@@ -14,6 +14,7 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"
+        android:textColor="#2A2A2A"
         android:text="회  원  가  입"
         android:textSize="40sp" />
 
