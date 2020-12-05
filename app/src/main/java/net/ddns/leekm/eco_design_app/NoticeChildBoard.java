@@ -33,24 +33,54 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
+// 공지사항 상세 게시글
 public class NoticeChildBoard extends AppCompatActivity {
-    XmlPullParser parser; // 파서
-    ArrayList<MyItem> arrayList; // 파싱해온 값을 저장해줄 리스트
-    String xml; // xml의 url
     MyAdapter myAdapter; // 어댑터
     ImageView imageView; // 이미지
     Bitmap bitmap; // 이미지 가져올때 저장할곳
     TextView title; // 제목
-    TextView desc; // 자기소개
     TextView num; // 글 번호
     TextView date; //글 작성일
     TextView writer; // 글 작성자
     TextView mainText; // 글 본문
-    TextInputEditText c_text; // 댓글내용
-    //Spinner spinner2;
+    TextInputEditText c_text; // 댓글작성내용
     String board_num;
     MyItem item;
     ListView listView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_notice_child_board);
+
+        title = findViewById(R.id.board_title);
+        num = findViewById(R.id.board_num);
+        date = findViewById(R.id.board_date);
+        writer = findViewById(R.id.board_writer);
+        mainText = findViewById(R.id.mainText);
+        imageView = findViewById(R.id.childBoardImage);
+
+        init();
+
+        listView.setOnItemClickListener((parent, view, position, l_position)->{
+            // 작업안함.
+        });
+
+        listView.setOnItemLongClickListener((parent, view, position, id)->{
+            Intent new_intent = new Intent(this, Popup.class);
+            TextView c_writer = view.findViewById(R.id.c_writer);
+            String comment_num = item.getComment().get(position).getComment_num();
+            String comment_writer = c_writer.getText().toString();
+            AppData appData = (AppData)getApplication();
+            if(comment_writer.equals(appData.getUser().get이름()) || appData.getUser().get이름().equals("admin")){ // 현재 접속중인 계정의 이름과 댓글의 이름이 같다면
+                new_intent.putExtra("data","작업을 선택해 주세요.");
+                new_intent.putExtra("type","Comment");
+                new_intent.putExtra("pos",comment_num);
+                startActivityForResult(new_intent,0);
+            }
+            return true;
+        });
+    }
 
     public void init(){
         String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/getDetailBoard.jsp";
@@ -127,45 +157,12 @@ public class NoticeChildBoard extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notice_child_board);
-
-        title = findViewById(R.id.board_title);
-        num = findViewById(R.id.board_num);
-        date = findViewById(R.id.board_date);
-        writer = findViewById(R.id.board_writer);
-        mainText = findViewById(R.id.mainText);
-        imageView = findViewById(R.id.childBoardImage);
-
-        init();
-
-        listView.setOnItemClickListener((parent, view, position, l_position)->{
-            // 작업안함.
-        });
-
-        listView.setOnItemLongClickListener((parent, view, position, id)->{
-            Intent new_intent = new Intent(this, Popup.class);
-            TextView c_writer = view.findViewById(R.id.c_writer);
-            String comment_num = item.getComment().get(position).getComment_num();
-            String comment_writer = c_writer.getText().toString();
-            AppData appData = (AppData)getApplication();
-            if(comment_writer.equals(appData.getUser().get이름()) || appData.getUser().get이름().equals("admin")){ // 현재 접속중인 계정의 이름과 댓글의 이름이 같다면
-                new_intent.putExtra("data","작업을 선택해 주세요.");
-                new_intent.putExtra("type","Comment");
-                new_intent.putExtra("pos",comment_num);
-                startActivityForResult(new_intent,0);
-            }
-            return true;
-        });
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
         init();
     }
-
+    
+    // 댓글 작성 버튼 클릭시
     public void onClick(View v){
         String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/insertComment.jsp";
         String parse_data = null;
@@ -200,8 +197,6 @@ public class NoticeChildBoard extends AppCompatActivity {
 
         Parse p = new Parse((AppData)getApplication() ,parse_data);
         if(p.getNotice().equals("success")){
-            //Intent intent = new Intent(this,MainMenu.class);
-            //startActivityForResult(intent,0);//액티비티 띄우기
             Log.i("댓글삽입완료","삽입완료");
         }
 

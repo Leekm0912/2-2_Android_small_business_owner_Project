@@ -45,6 +45,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
+// 공지사항 작성
 public class UploadNoticeBoard extends AppCompatActivity {
     EditText title; // 입력한 제목
     TextInputEditText text; // 입력한 본문 내용

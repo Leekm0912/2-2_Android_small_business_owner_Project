@@ -15,6 +15,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
 
+// 정보
 public class info1 extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override

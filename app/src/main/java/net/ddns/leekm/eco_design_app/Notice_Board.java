@@ -22,6 +22,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
+// 공지사항 게시판
 public class Notice_Board extends AppCompatActivity {
     Button button;
     ArrayList<MyItem> arrayList; // 파싱해온 값을 저장해줄 리스트
@@ -39,21 +40,14 @@ public class Notice_Board extends AppCompatActivity {
         if(appData.getUser().getID().equals("admin")){
             button.setVisibility(View.VISIBLE);
         }
-        button.setOnClickListener((v) ->{
-            Intent intent = new Intent(this, UploadNoticeBoard.class);
-            intent.putExtra("분류","공지사항");
-            startActivity(intent);
-        });
 
         init();
         listView.setOnItemClickListener((parent, view, position, l_position)->{
-            // 암시적 호출하기
+            // 명시적 호출하기
             Intent intent = new Intent(this,NoticeChildBoard.class);
             TextView textView = view.findViewById(R.id.notice_main_postNumber);
             Log.i("Intent에 넣을 num값(글번호) : ",textView.getText().toString());
             intent.putExtra("board_num", textView.getText().toString());
-            //Log.i("Intent에 넣을 게시판종류 : ",spinner2.getSelectedItem().toString());
-            //intent.putExtra("board", spinner2.getSelectedItem().toString());
             intent.putExtra("board", "공지사항");
             startActivityForResult(intent,0);//액티비티 띄우기
         });
@@ -77,7 +71,6 @@ public class Notice_Board extends AppCompatActivity {
     public void init(){
         String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/getBoard.jsp";
         ContentValues contentValues = new ContentValues();
-        //contentValues.put("게시판",spinner2.getSelectedItem().toString());
         contentValues.put("분류","공지사항");
         String parse_data = null;
 
@@ -101,8 +94,11 @@ public class Notice_Board extends AppCompatActivity {
         listView.setAdapter(myAdapter);
     }
 
+    // 공지사항 생성 클릭시
     public void makeNotice(View v){
-
+        Intent intent = new Intent(this, UploadNoticeBoard.class);
+        intent.putExtra("분류","공지사항");
+        startActivity(intent);
     }
 
     @Override
@@ -116,8 +112,6 @@ public class Notice_Board extends AppCompatActivity {
         LayoutInflater inflater;
         ArrayList<MyItem> list;
         int layout;
-        Bitmap bitmap;
-
 
         @SuppressLint("ServiceCast")
         public MyAdapter(Context context, int layout, ArrayList<MyItem> item){
@@ -153,12 +147,10 @@ public class Notice_Board extends AppCompatActivity {
             TextView title = convertView.findViewById(R.id.notice_main_title);
             TextView num = convertView.findViewById(R.id.notice_main_postNumber);
             TextView date = convertView.findViewById(R.id.notice_main_date);
-            //TextView writer = convertView.findViewById(R.id.writer);
 
             title.setText(list.get(position).getTitle());
             num.setText(list.get(position).getPostNumber());
             date.setText(list.get(position).getDate());
-            //writer.setText(list.get(position).getUserName());
 
             return convertView;
         }

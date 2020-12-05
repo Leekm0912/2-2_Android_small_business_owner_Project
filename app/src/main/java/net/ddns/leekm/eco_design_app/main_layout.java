@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.widget.Button;
 import android.widget.Toast;
 
+// 앱 처음 실행시 보이는 화면
 public class main_layout extends AppCompatActivity {
     Button info1_btn;
     Button ba_btn;

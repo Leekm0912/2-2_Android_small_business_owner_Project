@@ -16,11 +16,12 @@ public class AppData extends Application {
             // 읽기 권한
             Manifest.permission.READ_EXTERNAL_STORAGE
     };
+    // 사용자 로그인시 저장되어 사용. session 느낌으로다가 쓸 예정.
     private 사용자 user = new 사용자();
+
     public 사용자 getUser() {
         return user;
     }
-
     public void setUser(사용자 user) {
         this.user = user;
     }

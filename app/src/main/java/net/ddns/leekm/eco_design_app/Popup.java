@@ -26,7 +26,6 @@ public class Popup extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_popup);
 
-
         //UI 객체생성
         textView = findViewById(R.id.text);
 

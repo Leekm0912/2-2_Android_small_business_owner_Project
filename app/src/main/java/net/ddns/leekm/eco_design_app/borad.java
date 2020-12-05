@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
+// 게시글 작성
 public class borad extends AppCompatActivity {
     Button submit;
     TextInputEditText title;
@@ -32,26 +33,10 @@ public class borad extends AppCompatActivity {
         //db에 담을 제목, 내용
         title = findViewById(R.id.title);
         text = findViewById(R.id.text);
-
         submit = findViewById(R.id.submit);
-        /*
-        submit.setOnClickListener((v)->{
-            Intent intent;
-            Toast.makeText(this,"등록되었습니다.",Toast.LENGTH_SHORT).show();
-            switch (rg.getCheckedRadioButtonId()){
-                case R.id.Consulting:
-                    intent = new Intent(this,ConsultingBooking.class);
-                    startActivity(intent);
-                    break;
-                case R.id.Diy:
-                    intent = new Intent(this,DIY_booking.class);
-                    startActivity(intent);
-                    break;
-            }
-        });
-        */
     }
-
+    
+    // 게시글 작성버튼 누르면 동작
     public void postSubmit(View v){
         Map<String, String> param = new HashMap<>();
         String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/postUpload.jsp";
@@ -63,6 +48,7 @@ public class borad extends AppCompatActivity {
 
             String title_str = title.getText().toString();
             String text_str = text.getText().toString();
+            // 허용하지 않을 문자들.
             Pattern pattern = Pattern.compile("[<>+%]");
             if(pattern.matcher(title_str).find() || pattern.matcher(text_str).find()){ // 특수문자 들어있으면 true 리턴
                 Toast.makeText(this,"사용 불가능한 특수문자가 포함되어 있습니다.",Toast.LENGTH_SHORT).show();
@@ -79,32 +65,12 @@ public class borad extends AppCompatActivity {
             contentValues.put("분류", intent.getStringExtra("분류"));
             contentValues.put("사용자_ID", appData.getUser().getID());
         }
-        /*catch (NumberFormatException ne){ //숫자가 아닌값을 price에 입력했을때.
-            ne.printStackTrace();
-            Toast.makeText(this, "가격은 숫자만 가능합니다.", Toast.LENGTH_SHORT).show();
-        }*/
         catch(Exception e){
             e.printStackTrace();
-            Toast.makeText(this, "빈칸이 있거나 잘못된 가격입니다.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "빈칸이 있습니다.",Toast.LENGTH_SHORT).show();
             return;
         }
-        /* 이미지 전송부분
-        try{
-            //File이 널이 아니면 이미지 전송
-            if(tempSelectFile != null) {
-                String result = DoFileUpload(AppData.SERVER_FULL_URL+"/yonam-market/market/img_upload/uploadAction.jsp",tempSelectFile, param);  //해당 함수를 통해 이미지 전송.
-                Parse p = new Parse((AppData)getApplication() ,result);
-                if(p.getNotice().equals("success")){
-                    //Intent intent = new Intent(this,MainMenu.class);
-                    //startActivityForResult(intent,0);//액티비티 띄우기
-                    Log.i("삽입완료","삽입완료");
-                    Toast.makeText(this,"그림+게시물 작성 완료",Toast.LENGTH_SHORT).show();
-                }else{
-                    return;
-                }
-            }else{
-
-         */
+        
         NetworkTask networkTask = new NetworkTask(this, url, contentValues, (AppData)getApplication());
         try {
             parse_data =  networkTask.execute().get(); // get()함수를 이용해 작업결과를 불러올 수 있음.
@@ -116,20 +82,14 @@ public class borad extends AppCompatActivity {
         }
 
         Parse p = new Parse((AppData)getApplication() ,parse_data);
-        if(p.getNotice().equals("success")){
-            //Intent intent = new Intent(this,MainMenu.class);
-            //startActivityForResult(intent,0);//액티비티 띄우기
+        if(p.getNotice().equals("success")){ // 서버작업이 정상적으로 처리되면 서버가 success 리턴
             Log.i("삽입완료","삽입완료");
             Toast.makeText(this,"게시물 작성 완료",Toast.LENGTH_SHORT).show();
         }
         else {
+            // 서버 작업 결과가 success가 아니면 return 시켜서 액티비티가종료되지 않게 함.
             return;
         }
-        /* 이미지 전송부분
-        catch(Exception e){
-            e.printStackTrace();
-        }
-        */
         finish();
     }
 }

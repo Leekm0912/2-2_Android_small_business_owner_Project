@@ -36,6 +36,7 @@ import java.util.Objects;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+// B/A게시판이네. 나중에 이름 수정해라
 public class MainActivity extends AppCompatActivity {
     // XML문서를 담는 xml스트링
     // XML의 ListView를 저장해둘 listView

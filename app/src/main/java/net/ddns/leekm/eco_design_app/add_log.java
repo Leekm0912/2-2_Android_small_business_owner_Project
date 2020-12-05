@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+// 회원가입창
 public class add_log extends AppCompatActivity {
     TextInputLayout name;
     TextInputLayout id;
@@ -64,7 +65,7 @@ public class add_log extends AppCompatActivity {
             }
 
             Parse p = new Parse((AppData)getApplication() ,parse_data);
-            if(p.getNotice().equals("success")){
+            if(p.getNotice().equals("success")){ // 작업이 정상적으로 완료되면 서버에서 success를 보냄.
                 Toast.makeText(this,"계정 생성 완료",Toast.LENGTH_SHORT).show();
                 finish();
             }

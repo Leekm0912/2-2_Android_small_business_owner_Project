@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+// 게시판 선택
 public class booktype extends AppCompatActivity {
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.widget.TextView;
 
+// 로그인 후 메인 화면
 public class login_layout extends AppCompatActivity {
 
     @Override

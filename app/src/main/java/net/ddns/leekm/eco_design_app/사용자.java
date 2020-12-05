@@ -1,5 +1,6 @@
 package net.ddns.leekm.eco_design_app;
 
+// 사용자 정보. Application에 담겨 전역으로 사용될 예정
 public class 사용자 {
     private String ID;
     private String PW;

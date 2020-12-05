@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+// 로그인 화면
 public class login extends AppCompatActivity {
     //새로 넣은 TextInputLayout를 insertID로 교체
     private TextInputLayout insertID;
@@ -32,6 +33,7 @@ public class login extends AppCompatActivity {
         EditText editTextID = textwatcher(insertID);
         EditText editTextPW = textwatcher(insertPW);
 
+        // 로그인버튼 누를때 동작
         button.setOnClickListener((v) -> {
             String url = AppData.SERVER_FULL_URL+"/eco_design/eco_design/signIn.jsp";
             String parse_data = null;
@@ -63,6 +65,21 @@ public class login extends AppCompatActivity {
                 p.setUser();
                 Intent intent = new Intent(login.this, login_layout.class);
                 startActivityForResult(intent, 0);//액티비티 띄우기
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 화면이 다시 보이면 서버연결체크 다시. 일단 버튼 비활성화 시킴.
+        button.setEnabled(false);
+        new InternetCheck(internet -> { // 서버 연결 체크
+            if(internet) {
+                button.setEnabled(true);
+            }else{
+                button.setEnabled(false);
+                Toast.makeText(this, "서버off", Toast.LENGTH_LONG).show();
             }
         });
     }

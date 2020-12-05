@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+// 서버에 작업을 요청해주는 클래스. 결과로 String타입 작업결과(HTML문서)를 리턴
 public class NetworkTask extends AsyncTask<Void, Void, String> {
     private Context context;
     private String url;

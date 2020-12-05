@@ -16,6 +16,7 @@ import java.net.URLEncoder;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
+// 댓글 수정
 public class UpdateCommentPopup extends AppCompatActivity {
     String type;
     String pos;
@@ -71,7 +72,6 @@ public class UpdateCommentPopup extends AppCompatActivity {
             Toast.makeText(this, "댓글을 입력하세요",Toast.LENGTH_SHORT).show();
             return;
         }
-        //contentValues.put("게시판_num",board);
 
         NetworkTask networkTask = new NetworkTask(this, url, contentValues, (AppData)getApplication());
         try {

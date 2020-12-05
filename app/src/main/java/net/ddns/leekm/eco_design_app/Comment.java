@@ -1,5 +1,6 @@
 package net.ddns.leekm.eco_design_app;
 
+// 댓글 클래스
 public class Comment {
     private String Comment_num;
     private String 게시판_num;
