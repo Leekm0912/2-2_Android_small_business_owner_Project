@@ -10,21 +10,24 @@ class MyItem {
     private String mainText;
 
     private ArrayList<Comment> comment;
+    private String imagePath;
 
-    public MyItem(String title, String userName, String date, String postNumber) {
+    public MyItem(String title, String userName, String date, String postNumber, String imagePath) {
         this.title = title;
         this.userName = userName;
         this.date = date;
         this.postNumber = postNumber;
+        this.imagePath = imagePath;
         comment = new ArrayList<Comment>();
     }
 
-    public MyItem(String title, String userName, String date, String postNumber, String mainText) {
+    public MyItem(String title, String userName, String date, String postNumber, String mainText, String imagePath) {
         this.title = title;
         this.userName = userName;
         this.date = date;
         this.postNumber = postNumber;
         this.mainText = mainText;
+        this.imagePath = imagePath;
         comment = new ArrayList<Comment>();
     }
 
@@ -56,4 +59,6 @@ class MyItem {
     public String getPostNumber() {
         return postNumber;
     }
+
+    public String getImagePath(){ return imagePath;}
 }

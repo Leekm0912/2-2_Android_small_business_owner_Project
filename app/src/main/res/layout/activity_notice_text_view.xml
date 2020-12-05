@@ -11,11 +11,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        //제목 들어갈 자리
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/title"
+            android:id="@+id/notice_main_title"
             android:layout_weight="1"
             android:textColor="#2A2A2A"
             android:textSize="20dp"
@@ -29,19 +28,35 @@
             android:layout_weight="4"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#838383"
+                android:textSize="10dp"
+                android:text="글번호 : "
+                android:gravity="right" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="#838383"
+                android:textSize="10dp"
+                android:id="@+id/notice_main_postNumber"/>
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#838383"
                 android:textSize="10dp"
                 android:text="날짜 : "
-                android:gravity="right"/>
+                android:gravity="right" />
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:textColor="#838383"
-                android:textSize="10dp" />
+                android:textSize="10dp"
+                android:id="@+id/notice_main_date"/>
         </LinearLayout>
     </LinearLayout>
 

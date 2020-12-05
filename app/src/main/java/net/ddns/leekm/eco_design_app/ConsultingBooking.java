@@ -33,15 +33,9 @@ import java.util.concurrent.ExecutionException;
 
 public class ConsultingBooking extends AppCompatActivity {
     Button button;
-    XmlPullParser parser; // 파서
     ArrayList<MyItem> arrayList; // 파싱해온 값을 저장해줄 리스트
-    String xml; // xml의 url
     MyAdapter myAdapter; // 어댑터
-    TextView title; // 제목
-    TextView desc; // 자기소개
-    Spinner spinner2;
     ListView listView;
-    TextView price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
