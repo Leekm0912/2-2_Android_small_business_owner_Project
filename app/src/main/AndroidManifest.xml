@@ -3,6 +3,7 @@
     package="net.ddns.leekm.eco_design_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.DIAL_PHONE" />
 
     <application
         android:name=".AppData"
