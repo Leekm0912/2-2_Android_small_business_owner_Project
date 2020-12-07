@@ -1,7 +1,5 @@
 package net.ddns.leekm.eco_design_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
