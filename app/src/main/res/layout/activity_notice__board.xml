@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
         android:background="#D6D6D6">
         <TextView
             android:layout_width="match_parent"
@@ -22,26 +22,29 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#D6D6D6">
-        <Button
-            android:id="@+id/makeNotice"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="공지사항 등록"
-            android:onClick="makeNotice"
-            android:visibility="gone"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:background="#D6D6D6">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/noticeMainListView"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:background="#D6D6D6">
+        <Button
+            android:id="@+id/makeNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="공지사항 등록"
+            android:onClick="makeNotice"
+            android:textSize="20dp"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>
