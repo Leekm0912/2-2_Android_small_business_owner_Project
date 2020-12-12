@@ -22,9 +22,4 @@ public class AppData extends Application {
     public 사용자 getUser() {
         return user;
     }
-    public void setUser(사용자 user) {
-        this.user = user;
-    }
-
-
 }

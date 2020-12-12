@@ -55,7 +55,7 @@ public class main_layout extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.add_log:
-                    intent = new Intent(main_layout.this,add_log.class);
+                    intent = new Intent(main_layout.this, SignUp.class);
                     startActivity(intent);
                     break;
             }
