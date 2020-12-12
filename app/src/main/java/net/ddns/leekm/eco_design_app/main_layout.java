@@ -2,8 +2,12 @@ package net.ddns.leekm.eco_design_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 // 앱 처음 실행시 보이는 화면
@@ -12,6 +16,7 @@ public class main_layout extends AppCompatActivity {
     Button ba_btn;
     Button login_btn;
     Button add_log_btn;
+    TextView version;
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +25,7 @@ public class main_layout extends AppCompatActivity {
         ba_btn = findViewById(R.id.ba);
         login_btn = findViewById(R.id.login_btn);
         add_log_btn = findViewById(R.id.add_log);
+        version = findViewById(R.id.version);
 
         new InternetCheck(internet -> { // 서버 연결 체크
             if(internet) {
@@ -29,36 +35,44 @@ public class main_layout extends AppCompatActivity {
                 Toast.makeText(this, "서버off", Toast.LENGTH_LONG).show();
             }
         });
-
+        version.setText("version : "+getVersionInfo(this));
         info1_btn.setOnClickListener(onClickListener);
         ba_btn.setOnClickListener(onClickListener);
         login_btn.setOnClickListener(onClickListener);
         add_log_btn.setOnClickListener(onClickListener);
     }
 
-    android.view.View.OnClickListener onClickListener = new android.view.View.OnClickListener(){
+    // gradle에서 버젼정보를 불러옴
+    public String getVersionInfo(Context context){
+        String version = null;
+        try {
+            PackageInfo i = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            version = i.versionName;
+        } catch(PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return version;
+    }
 
-        @Override
-        public void onClick(android.view.View v) {
-            Intent intent;
-            switch (v.getId()){
-                case R.id.info1:
-                    intent = new Intent(main_layout.this,info1.class);
-                    startActivity(intent);
-                    break;
-                case R.id.ba:
-                    intent = new Intent(main_layout.this,MainActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.login_btn:
-                    intent = new Intent(main_layout.this,login.class);
-                    startActivity(intent);
-                    break;
-                case R.id.add_log:
-                    intent = new Intent(main_layout.this, SignUp.class);
-                    startActivity(intent);
-                    break;
-            }
+    android.view.View.OnClickListener onClickListener = v -> {
+        Intent intent;
+        switch (v.getId()){
+            case R.id.info1:
+                intent = new Intent(main_layout.this,info1.class);
+                startActivity(intent);
+                break;
+            case R.id.ba:
+                intent = new Intent(main_layout.this,MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.login_btn:
+                intent = new Intent(main_layout.this,login.class);
+                startActivity(intent);
+                break;
+            case R.id.add_log:
+                intent = new Intent(main_layout.this, SignUp.class);
+                startActivity(intent);
+                break;
         }
     };
 
