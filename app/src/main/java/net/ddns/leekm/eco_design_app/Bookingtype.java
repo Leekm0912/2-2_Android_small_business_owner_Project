@@ -6,23 +6,23 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 // 게시판 선택
-public class booktype extends AppCompatActivity {
+public class Bookingtype extends AppCompatActivity {
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booktype);
+        setContentView(R.layout.activity_bookingtype);
 
     }
 
     public void mClick(View v){
         Intent intent;
         switch (v.getId()){
-            case R.id.Consulting_book:
-                intent = new Intent(booktype.this,ConsultingBooking.class);
+            case R.id.Consulting_booking:
+                intent = new Intent(Bookingtype.this,ConsultingBooking.class);
                 startActivity(intent);
                 break;
-            case R.id.DIY_book:
-                intent = new Intent(booktype.this,DIY_booking.class);
+            case R.id.DIY_booking:
+                intent = new Intent(Bookingtype.this,DIY_booking.class);
                 startActivity(intent);
                 break;
         }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/back"
-    tools:context=".booktype">
+    tools:context=".Bookingtype">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         android:paddingLeft="80dp"
         android:paddingBottom="100dp">
         <Button
-            android:id="@+id/Consulting_book"
+            android:id="@+id/Consulting_booking"
             android:background="@drawable/button_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -38,7 +38,7 @@
         android:paddingLeft="80dp"
         android:paddingBottom="100dp">
         <Button
-            android:id="@+id/DIY_book"
+            android:id="@+id/DIY_booking"
             android:background="@drawable/button_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

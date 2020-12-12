@@ -15,12 +15,12 @@ import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
 
 // 정보
-public class info1 extends AppCompatActivity implements OnMapReadyCallback {
+public class Information extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info1);
+        setContentView(R.layout.activity_information);
 
         MapFragment mapFragment = (MapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if(mapFragment == null){

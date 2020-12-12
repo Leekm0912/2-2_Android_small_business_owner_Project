@@ -19,14 +19,14 @@ import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
 // 게시글 작성
-public class borad extends AppCompatActivity {
+public class Board extends AppCompatActivity {
     Button submit;
     TextInputEditText title;
     TextInputEditText text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_borad);
+        setContentView(R.layout.activity_board);
         //db에 담을 제목, 내용
         title = findViewById(R.id.title);
         text = findViewById(R.id.text);

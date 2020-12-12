@@ -26,27 +26,27 @@
             android:name=".Popup"
             android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
         <activity android:name=".ChildBoard" />
-        <activity android:name=".borad" />
+        <activity android:name=".Board" />
         <activity android:name=".DIY_booking" />
         <activity android:name=".ConsultingBooking" />
-        <activity android:name=".booktype" />
+        <activity android:name=".Bookingtype" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="w853dymsz0" />
 
         <activity android:name=".SignUp" />
-        <activity android:name=".info1" />
-        <activity android:name=".login" />
-        <activity android:name=".main_layout">
+        <activity android:name=".Information" />
+        <activity android:name=".Login" />
+        <activity android:name=".Layout_before_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".login_layout" />
+        <activity android:name=".Before_after" />
+        <activity android:name=".Layout_after_login" />
     </application>
 
 </manifest>

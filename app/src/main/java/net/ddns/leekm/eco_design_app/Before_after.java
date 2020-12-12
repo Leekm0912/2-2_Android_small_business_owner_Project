@@ -32,7 +32,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 // B/A게시판이네. 나중에 이름 수정해라
-public class MainActivity extends AppCompatActivity {
+public class Before_after extends AppCompatActivity {
     // XML문서를 담는 xml스트링
     // XML의 ListView를 저장해둘 listView
     // 전체 내용을 저장할 arrayList 배열
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_before_after);
         //AsyncTask를 상속받는 Task 생성 및 execute로 시작
         Task task = new Task();
         task.execute();
@@ -130,10 +130,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //3번 작업
-        //어뎁터 객체를 생성 후 MainActivity 에 배열을 합친다.
+        //어뎁터 객체를 생성 후 Before_after 에 배열을 합친다.
         @Override
         protected void onPostExecute(Void aVoid) {
-            MultiAdapter multiAdapter = new MultiAdapter(MainActivity.this, arrayList);
+            MultiAdapter multiAdapter = new MultiAdapter(Before_after.this, arrayList);
             listView.setAdapter(multiAdapter);
         }
         //2번째로 작업하고 메인에서가 아닌 새로운 서브 스레드 공간으로 만들어져 활동 후 스스로 만든

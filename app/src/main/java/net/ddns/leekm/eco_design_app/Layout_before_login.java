@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 // 앱 처음 실행시 보이는 화면
-public class main_layout extends AppCompatActivity {
+public class Layout_before_login extends AppCompatActivity {
     Button info1_btn;
     Button ba_btn;
     Button login_btn;
@@ -20,8 +20,8 @@ public class main_layout extends AppCompatActivity {
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_layout);
-        info1_btn = findViewById(R.id.info1);
+        setContentView(R.layout.activity_layout_before_login);
+        info1_btn = findViewById(R.id.information);
         ba_btn = findViewById(R.id.ba);
         login_btn = findViewById(R.id.login_btn);
         add_log_btn = findViewById(R.id.add_log);
@@ -57,20 +57,20 @@ public class main_layout extends AppCompatActivity {
     android.view.View.OnClickListener onClickListener = v -> {
         Intent intent;
         switch (v.getId()){
-            case R.id.info1:
-                intent = new Intent(main_layout.this,info1.class);
+            case R.id.information:
+                intent = new Intent(Layout_before_login.this, Information.class);
                 startActivity(intent);
                 break;
             case R.id.ba:
-                intent = new Intent(main_layout.this,MainActivity.class);
+                intent = new Intent(Layout_before_login.this, Before_after.class);
                 startActivity(intent);
                 break;
             case R.id.login_btn:
-                intent = new Intent(main_layout.this,login.class);
+                intent = new Intent(Layout_before_login.this, Login.class);
                 startActivity(intent);
                 break;
             case R.id.add_log:
-                intent = new Intent(main_layout.this, SignUp.class);
+                intent = new Intent(Layout_before_login.this, SignUp.class);
                 startActivity(intent);
                 break;
         }

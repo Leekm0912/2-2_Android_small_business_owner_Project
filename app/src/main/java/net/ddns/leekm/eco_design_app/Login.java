@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 
 // 로그인 화면
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     //새로 넣은 TextInputLayout를 insertID로 교체
     private TextInputLayout insertID;
     private TextInputLayout insertPW;
@@ -63,7 +63,7 @@ public class login extends AppCompatActivity {
             Parse p = new Parse((AppData) getApplication(), parse_data);
             if (p.getNotice().equals("success")) {
                 p.setUser();
-                Intent intent = new Intent(login.this, login_layout.class);
+                Intent intent = new Intent(Login.this, Layout_after_login.class);
                 startActivityForResult(intent, 0);//액티비티 띄우기
             }
         });

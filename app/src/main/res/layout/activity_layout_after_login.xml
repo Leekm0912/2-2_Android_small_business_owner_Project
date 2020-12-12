@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_layout"
+    tools:context=".Layout_after_login"
     android:orientation="vertical"
     android:background="@drawable/back">
 
@@ -69,7 +69,7 @@
         android:paddingRight="80dp"
         android:paddingLeft="80dp">
         <Button
-            android:id="@+id/info1"
+            android:id="@+id/information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="업체소개"

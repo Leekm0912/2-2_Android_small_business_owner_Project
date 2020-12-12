@@ -32,7 +32,7 @@ public class ConsultingBooking extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         button = findViewById(R.id.btn1);
         button.setOnClickListener((v) ->{
-            Intent intent = new Intent(this,borad.class);
+            Intent intent = new Intent(this, Board.class);
             intent.putExtra("분류","상담예약");
             startActivity(intent);
         });

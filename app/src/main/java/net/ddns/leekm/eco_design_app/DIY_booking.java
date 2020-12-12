@@ -29,11 +29,11 @@ public class DIY_booking extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_d_i_y_booking);
+        setContentView(R.layout.activity_diy_booking);
         listView = findViewById(R.id.listView);
         button = findViewById(R.id.btn1);
         button.setOnClickListener((v) ->{
-            Intent intent = new Intent(this,borad.class);
+            Intent intent = new Intent(this, Board.class);
             intent.putExtra("분류","DIY예약");
             startActivity(intent);
         });
