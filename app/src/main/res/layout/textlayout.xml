@@ -10,7 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text2"
-        android:textColor="#2A2A2A"
         android:textSize="20dp"
         android:padding="5dp"/>
 

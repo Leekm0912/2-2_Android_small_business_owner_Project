@@ -16,10 +16,15 @@ public class AppData extends Application {
             // 읽기 권한
             Manifest.permission.READ_EXTERNAL_STORAGE
     };
-    // 사용자 로그인시 저장되어 사용. session 느낌으로다가 쓸 예정.
-    private 사용자 user = new 사용자();
-
+    // 로그인한 사용자의 정보를 전역적으로 관리해줄 필드
+    private 사용자 user;
     public 사용자 getUser() {
         return user;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        this.user =  new 사용자();
     }
 }
