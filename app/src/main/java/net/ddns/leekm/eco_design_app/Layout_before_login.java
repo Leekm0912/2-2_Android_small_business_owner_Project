@@ -57,6 +57,7 @@ public class Layout_before_login extends AppCompatActivity {
     android.view.View.OnClickListener onClickListener = v -> {
         Intent intent;
         switch (v.getId()){
+            //버튼별 옮겨지는 위치 지정
             case R.id.information:
                 intent = new Intent(Layout_before_login.this, Information.class);
                 startActivity(intent);

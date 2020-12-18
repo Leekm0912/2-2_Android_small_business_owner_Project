@@ -92,6 +92,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                //아이디 비밀번호 제약(한글 x)
                 if (s.toString().matches(".*[ㄱ-ㅎㅏ-ㅣ가-힣]+.*")) {
                     isError = true;
                     editText.setError("영문자, 특수문자만 사용 가능합니다.");
@@ -119,6 +120,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                //전화 번호 제약(숫자만)
                 if(!s.toString().matches("^[0-9]+$") | s.toString().length() != 11){ // 전화번호 형식 정규식으로 확인
                     isError = true;
                     Log.i("==============전화번호================",s.toString());
@@ -147,6 +149,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                //이름 제약(한글만 가능)
                 if (!s.toString().matches(".*[ㄱ-ㅎㅏ-ㅣ가-힣]+.*")) {
                     isError = true;
                     Log.i("==============이름================",s.toString());

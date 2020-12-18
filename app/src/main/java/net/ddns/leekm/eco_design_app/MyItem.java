@@ -13,6 +13,7 @@ class MyItem {
     private ArrayList<Comment> comment;
     private String imagePath;
 
+    //생성자 1
     public MyItem(String title, String userName, String date, String postNumber, String imagePath) {
         this.title = title;
         this.userName = userName;
@@ -22,6 +23,7 @@ class MyItem {
         comment = new ArrayList<Comment>();
     }
 
+    //생성자2
     public MyItem(String title, String userName, String date, String postNumber, String mainText, String imagePath) {
         this.title = title;
         this.userName = userName;

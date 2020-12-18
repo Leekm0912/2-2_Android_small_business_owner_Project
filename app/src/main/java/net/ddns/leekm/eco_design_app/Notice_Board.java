@@ -38,7 +38,8 @@ public class Notice_Board extends AppCompatActivity {
             button.setVisibility(View.VISIBLE);
         }
 
-        init();
+
+        init();  //초기화
         listView.setOnItemClickListener((parent, view, position, l_position)->{
             // 명시적 호출하기
             Intent intent = new Intent(this,NoticeChildBoard.class);

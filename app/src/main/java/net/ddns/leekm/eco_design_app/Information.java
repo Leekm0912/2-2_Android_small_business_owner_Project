@@ -49,12 +49,12 @@ public class Information extends AppCompatActivity implements OnMapReadyCallback
         CameraUpdate cameraUpdate2 = CameraUpdate.zoomTo(15);
         naverMap.moveCamera(cameraUpdate2);
 
-        // 매장 1
+        // 에코건축 디자인 매장 지정
         Marker marker1 = new Marker();
         marker1.setPosition(latLng1);
         marker1.setMap(naverMap);
 
-        marker1.setSubCaptionText("에코건축자재");
+        marker1.setSubCaptionText("에코건축디자인");
         marker1.setCaptionColor(android.graphics.Color.RED);
         marker1.setSubCaptionHaloColor(android.graphics.Color.YELLOW);
         marker1.setSubCaptionTextSize(10);
@@ -64,12 +64,13 @@ public class Information extends AppCompatActivity implements OnMapReadyCallback
             @androidx.annotation.NonNull
             @Override
             public CharSequence getText(@androidx.annotation.NonNull InfoWindow infoWindow) {
-                return "에코건축자재";
+                return "에코건축디자인";
             }
         });
         infoWindow1.open(marker1);
 
     }
+    //전화 번호 누를시 전화 패드로 이동 및 번호 붙혀줌
     public void call(View v){
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-3508-1413"));
         startActivity(intent);

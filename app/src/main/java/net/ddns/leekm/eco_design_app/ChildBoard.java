@@ -94,7 +94,7 @@ public class ChildBoard extends AppCompatActivity {
         if(p.getNotice().equals("success")){
             item = p.getMyItem();
         }
-
+        //DB에서 가져온 정보들을 보이게함
         title.setText(item.getTitle());
         num.setText(item.getPostNumber());
         date.setText(item.getDate());

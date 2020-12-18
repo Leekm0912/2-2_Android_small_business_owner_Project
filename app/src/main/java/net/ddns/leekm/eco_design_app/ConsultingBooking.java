@@ -31,6 +31,7 @@ public class ConsultingBooking extends AppCompatActivity {
         setContentView(R.layout.activity_consulting_booking);
         listView = findViewById(R.id.listView);
         button = findViewById(R.id.btn1);
+        //상담예약의 값을 넣어 intent시킴
         button.setOnClickListener((v) ->{
             Intent intent = new Intent(this, Board.class);
             intent.putExtra("분류","상담예약");

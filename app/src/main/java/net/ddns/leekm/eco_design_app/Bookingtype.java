@@ -15,6 +15,7 @@ public class Bookingtype extends AppCompatActivity {
     }
 
     public void mClick(View v){
+        //case경우에 따라 옮겨지는 페이지를 다르게 지정
         Intent intent;
         switch (v.getId()){
             case R.id.Consulting_booking:

@@ -19,6 +19,7 @@ public class Layout_after_login extends AppCompatActivity {
 
     public void mClick(android.view.View v){
         Intent intent;
+        //버튼별 옮겨지는 위치 지정
         switch(v.getId()){
             case R.id.logout:
                 intent = new Intent(Layout_after_login.this, Layout_before_login.class);

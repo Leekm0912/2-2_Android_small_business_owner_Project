@@ -32,6 +32,7 @@ public class DIY_booking extends AppCompatActivity {
         setContentView(R.layout.activity_diy_booking);
         listView = findViewById(R.id.listView);
         button = findViewById(R.id.btn1);
+        //분류를 diy예약으로 지정해 intent시킴
         button.setOnClickListener((v) ->{
             Intent intent = new Intent(this, Board.class);
             intent.putExtra("분류","DIY예약");

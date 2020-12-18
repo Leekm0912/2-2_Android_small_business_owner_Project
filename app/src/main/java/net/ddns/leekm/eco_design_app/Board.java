@@ -52,6 +52,7 @@ public class Board extends AppCompatActivity {
                 return;
             }
             Intent intent = getIntent();
+            //제목, 내용, 분류, 사용자 id db에 넣어줌
             param.put("제목", URLEncoder.encode(title_str, "utf-8"));
             param.put("내용", URLEncoder.encode(text_str, "utf-8"));
             param.put("분류", intent.getStringExtra("분류"));
